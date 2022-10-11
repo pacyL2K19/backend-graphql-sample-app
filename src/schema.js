@@ -8,9 +8,16 @@ const typeDefs = gql`
     area: Int!
   }
 
+  input UpdateRecordInput {
+    country: String
+    year: String
+    totalPopulation: Int
+    area: Int
+  }
+
   type Query {
     getAllRecords: [Record]
-    # getRecordById(id: ID!): Record
+    getRecordById(id: ID!): Record
   }
 
   type Record {
@@ -24,9 +31,9 @@ const typeDefs = gql`
   type Mutation {
     addRecord(data: RecordInput!): Record
     # update record and return updated record
-    # updateRecord(id: ID, data: RecordInput): Record
+    updateRecord(id: ID, data: UpdateRecordInput): Record
     # delete record and return a boolean, true if deleted
-    # deleteRecord(id: ID): Boolean
+    deleteRecord(id: ID): Boolean
   }
 `;
 
