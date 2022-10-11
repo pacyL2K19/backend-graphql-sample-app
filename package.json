@@ -1,0 +1,22 @@
+{
+  "name": "backend-graphql-sample-app",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start:dev": "npx prisma generate && nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.4.0",
+    "apollo-server": "^3.10.3",
+    "graphql": "^16.6.0",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "prisma": "^4.4.0"
+  }
+}
