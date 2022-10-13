@@ -16,8 +16,9 @@ const typeDefs = gql`
   }
 
   type Query {
-    getAllRecords: [Record]
+    getAllRecords(limit: Int, skip: Int): [Record]
     getRecordById(id: ID!): Record
+    getRecordCount: Int
   }
 
   type Record {

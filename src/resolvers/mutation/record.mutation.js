@@ -1,6 +1,6 @@
 const recordMutation = {
   addRecord: async (parent, args, context) => {
-    const record = await context.prisma.record.create({ data: { ...args } });
+    const record = await context.prisma.record.create({ ...args });
     return record;
   },
 
